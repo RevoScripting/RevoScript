@@ -1,9 +1,9 @@
--- Revo Script - Working Version
+-- Revo Script - Clean Working Version
 
-local player = game.Players.LocalPlayer
 print("Revo Script: Loading...")
 
--- Simple GUI
+local player = game.Players.LocalPlayer
+
 local sg = Instance.new("ScreenGui")
 sg.ResetOnSpawn = false
 sg.Parent = player:WaitForChild("PlayerGui")
@@ -36,13 +36,13 @@ title.TextScaled = true
 title.Font = Enum.Font.GothamBold
 title.Parent = titleBar
 
-local text = Instance.new("TextLabel")
-text.Size = UDim2.new(1, 0, 0, 100)
-text.Position = UDim2.new(0, 0, 0, 100)
-text.BackgroundTransparency = 1
-text.Text = "✅ Script is working!\n\nKey: REVO-AURORA-TINKI\n\nMore features coming soon..."
-text.TextColor3 = Color3.new(1,1,1)
-text.TextScaled = true
-text.Parent = frame
+local info = Instance.new("TextLabel")
+info.Size = UDim2.new(1, 0, 0, 300)
+info.Position = UDim2.new(0, 0, 0, 100)
+info.BackgroundTransparency = 1
+info.Text = "✅ Script loaded successfully!\n\nKey: REVO-AURORA-TINKI\n\nThis is the new version."
+info.TextColor3 = Color3.new(1,1,1)
+info.TextScaled = true
+info.Parent = frame
 
-print("✅ Revo Script GUI loaded successfully!")
+print("✅ Revo Script - New Version loaded!")
