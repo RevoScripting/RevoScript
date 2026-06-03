@@ -1,2 +1,38 @@
--- Revo Script Obfuscated Full Version
-local a=game.Players.LocalPlayer;local b="RevoKey.dat";local c="RevoDevice.dat";print("Revo Script Loading...");local d="";if isfile and isfile(c)then d=readfile(c):gsub("%s+","")else d="DEV-"..math.random(100000,999999).."-"..os.time()if writefile then writefile(c,d)end end;local e="https://raw.githubusercontent.com/RevoScripting/RevoScript/main/RevoKeys.txt";local f={};local g,h=pcall(function()return game:HttpGet(e)end);if g and h and h~=""then for i in h:gmatch("[^\r\n]+")do local j=i:match("^%s*(.-)%s*$")if j and j~=""then table.insert(f,j)end end;print("✅ Loaded "..#f.." keys")else f={"REVO-AURORA-TINKI"}end;local k="";if isfile and isfile(b)then k=readfile(b):gsub("%s+","")end;local function l(m)for _,n in ipairs(f)do if m==n then return true end end;return false end;local function o()print("🎉 Revo Script loaded on Device: "..d);local p=Instance.new("ScreenGui")p.ResetOnSpawn=false;p.Parent=a:WaitForChild("PlayerGui");local q=Instance.new("Frame")q.Size=UDim2.new(0,340
+-- Revo Script - Test Version (Clean)
+
+local player = game.Players.LocalPlayer
+print("Revo Script: Started")
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Parent = player:WaitForChild("PlayerGui")
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Size = UDim2.new(0, 350, 0, 500)
+MainFrame.Position = UDim2.new(0.75, 0, 0.1, 0)
+MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 25)
+MainFrame.Parent = ScreenGui
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 12)
+corner.Parent = MainFrame
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 60)
+title.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
+title.Text = "REVO SCRIPT - TEST"
+title.TextColor3 = Color3.new(1,1,1)
+title.TextScaled = true
+title.Font = Enum.Font.GothamBold
+title.Parent = MainFrame
+
+local testLabel = Instance.new("TextLabel")
+testLabel.Size = UDim2.new(1, 0, 0, 100)
+testLabel.Position = UDim2.new(0, 0, 0, 100)
+testLabel.BackgroundTransparency = 1
+testLabel.Text = "✅ Script loaded successfully!\n\nIf you see this, the script works."
+testLabel.TextColor3 = Color3.new(1,1,1)
+testLabel.TextScaled = true
+testLabel.Parent = MainFrame
+
+print("✅ Test GUI should now be visible!")
