@@ -1,4 +1,4 @@
--- Revo Script - Clean Working Version
+-- Revo Script - Fixed Position
 
 print("Revo Script: Loading...")
 
@@ -10,7 +10,7 @@ sg.Parent = player:WaitForChild("PlayerGui")
 
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0, 340, 0, 480)
-frame.Position = UDim2.new(0.78, 0, 0.15, 0)
+frame.Position = UDim2.new(0.5, -170, 0.5, -240)  -- Besser zentriert
 frame.BackgroundColor3 = Color3.fromRGB(20, 20, 22)
 frame.Parent = sg
 
@@ -40,9 +40,9 @@ local info = Instance.new("TextLabel")
 info.Size = UDim2.new(1, 0, 0, 300)
 info.Position = UDim2.new(0, 0, 0, 100)
 info.BackgroundTransparency = 1
-info.Text = "✅ Script loaded successfully!\n\nKey: REVO-AURORA-TINKI\n\nThis is the new version."
+info.Text = "✅ Script loaded successfully!\n\nKey: REVO-AURORA-TINKI\n\nYou can now move this window."
 info.TextColor3 = Color3.new(1,1,1)
 info.TextScaled = true
 info.Parent = frame
 
-print("✅ Revo Script - New Version loaded!")
+print("✅ Revo Script loaded with better position!")
